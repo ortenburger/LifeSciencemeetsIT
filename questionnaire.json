@@ -1,0 +1,17 @@
+{
+    "questionnaire": {
+        "ID": "1",
+		"fields": {
+            "question": "Questiontext",
+			"data": {
+                "healthdata": {
+					"answertype":{"freetext","valuerange","selectbox","checkbox"},
+					"answerrange":{"from","to","list","emptywhenfreetext"},
+                    "answer": {},
+					"date": "01.01.2016",
+					"value": "42"
+                }
+            }
+        }
+    }
+}

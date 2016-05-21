@@ -1,0 +1,19 @@
+{
+    "medscheme": {
+        "ID": "1",
+		"fields": {
+            "PZN": "PZN",
+			"scheme": {
+					"days":{"Monday":{"mo":0,"no":0,"ev":0,"ni":0}, 
+							"Tuesday":{"mo":0,"no":0,"ev":0,"ni":0}, 
+							"Wednesday":{"mo":0,"no":0,"ev":0,"ni":0}, 
+							"Thursday":{"mo":0,"no":0,"ev":0,"ni":0}, 
+							"Friday":{"mo":0,"no":0,"ev":0,"ni":0}, 
+							"Saturday":{"mo":0,"no":0,"ev":0,"ni":0}, 
+							"Sunday":{"mo":0,"no":0,"ev":0,"ni":0}
+						},
+			"freetext":""
+            }
+        }
+    }
+}
