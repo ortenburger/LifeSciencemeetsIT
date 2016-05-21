@@ -1,17 +1,169 @@
 {
-    "questionnaire": {
+    "questionnaire": [{
+        "ID": "0",
+        "fields": {
+            "question": "How much do you weight?",
+            "data": {
+                "0": {
+                    "answertype":1,
+                    "answerrange":[0,500],
+                    "answer": "weight in kg",
+                    "date": "01.01.2016",
+                    "value": 0
+                }
+            }
+        }
+    },
+{
         "ID": "1",
-		"fields": {
-            "question": "Questiontext",
-			"data": {
-                "healthdata": {
-					"answertype":["freetext","valuerange","selectbox","checkbox"],
-					"answerrange":["from","to","list","emptywhenfreetext"],
-                    "answer": {},
-					"date": "01.01.2016",
-					"value": "42"
+        "fields": {
+            "question": "How bad is your pain?",
+            "data": {
+                "0": {
+                    "answertype":1,
+                    "answerrange":[0,10],
+                    "answer": "No pain to near death",
+                    "date": "01.01.2016",
+                    "value": 0
+                }
+            }
+        }
+    },
+{
+        "ID": "2",
+        "fields": {
+            "question": "What is your bloodpressure?",
+            "data": {
+                "0": {
+                    "answertype":1,
+                    "answerrange":[70,200],
+                    "answer": "systolic",
+                    "date": "01.01.2016",
+                    "value": 0
+                },
+                "1": {
+                    "answertype":1,
+                    "answerrange":[40,100],
+                    "answer": "dyastolic",
+                    "date": "01.01.2016",
+                    "value": 0
+                }
+            }
+        }
+    },
+{
+        "ID": "3",
+        "fields": {
+            "question": "What is your resting pulse?",
+            "data": {
+                "0": {
+                    "answertype":1,
+                    "answerrange":[30,250],
+                    "answer": "Sit still and check your pulse or connect Fitnesstracker",
+                    "date": "01.01.2016",
+                    "value": 0
+                }
+            }
+        }  
+    },
+{
+        "ID": "4",
+        "fields": {
+            "question": "Are you a Smoker?",
+            "data": {
+                "0": {
+                    "answertype":3,
+                    "answerrange":["yes"],
+                    "answer": "",
+                    "date": "01.01.2016",
+                    "value": [0]},
+                  
+                  "1":{
+                    "depends":"0.'value'[0]==true",
+                    "answertype":1,
+                    "answerrange":["yes"],
+                    "answer": "How many cigarettes daily?",
+                    "date": "01.01.2016",
+                    "value": 0
+                  }
+                }
+            }
+        
+    },
+{
+        "ID": "5",
+        "fields": {
+            "question": "How are you feeling?",
+            "data": {
+                "0": {
+                    "answertype":1,
+                    "answerrange":[0,10],
+                    "answer": "from sad to happy",
+                    "date": "01.01.2016",
+                    "value": 0
+                }
+            }
+        }
+    },
+{
+        "ID": "6",
+        "fields": {
+            "question": "Did you poo today?",
+            "data": {
+                "0": {
+                    "answertype":3,
+                    "answerrange":["yes"],
+                    "answer": "",
+                    "date": "01.01.2016",
+                    "value": [0]
+                }
+            }
+        }
+    },
+{
+        "ID": "7",
+        "fields": {
+            "question": "Are you pregnant?",
+            "data": {
+                "0": {
+                    "answertype":3,
+                    "answerrange":["yes"],
+                    "answer": "",
+                    "date": "01.01.2016",
+                    "value": [false]
+                }
+            }
+        }
+    },
+{
+        "ID": "8",
+        "fields": {
+            "question": "How often did you pee today?",
+            "data": {
+                "0": {
+                    "answertype":1,
+                    "answerrange":[0,30],
+                    "answer": "",
+                    "date": "01.01.2016",
+                    "value": 0
+                }
+            }
+        }
+    },
+{
+        "ID": "9",
+        "fields": {
+            "question": "How many steps you took today?",
+            "data": {
+                "0": {
+                    "answertype":1,
+                    "answerrange":[0,10000],
+                    "answer": "No pain to near death",
+                    "date": "01.01.2016",
+                    "value": 0
                 }
             }
         }
     }
+  ]
 }
