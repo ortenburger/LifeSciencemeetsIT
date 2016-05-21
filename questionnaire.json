@@ -5,8 +5,8 @@
             "question": "Questiontext",
 			"data": {
                 "healthdata": {
-					"answertype":{"freetext","valuerange","selectbox","checkbox"},
-					"answerrange":{"from","to","list","emptywhenfreetext"},
+					"answertype":["freetext","valuerange","selectbox","checkbox"],
+					"answerrange":["from","to","list","emptywhenfreetext"],
                     "answer": {},
 					"date": "01.01.2016",
 					"value": "42"
