@@ -15,7 +15,7 @@
 {
         "ID": "1",
             "question": "How bad is your pain?",
-            [{
+            data:[{
                     "answertype":1,
                     "answerrange":[0,10],
                     "answer": "No pain to near death",
@@ -89,7 +89,6 @@
                     "value": 0
                 }
             ]
-        }
     },
 {
         "ID": "6",
