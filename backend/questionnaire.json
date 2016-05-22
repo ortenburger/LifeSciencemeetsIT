@@ -84,7 +84,7 @@
     },
 {
         "_id": 6,
-            "question": "D_id you poo today?",
+            "question": "Did you poop today?",
             "data": [{
                     "answertype":3,
                     "answerrange":["yes"],
@@ -107,7 +107,7 @@
     },
 {
         "_id": 8,
-            "question": "How often d_id you pee today?",
+            "question": "How often did you pee today?",
             "data": [{
                     "answertype":1,
                     "answerrange":["0","30"],

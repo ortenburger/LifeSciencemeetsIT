@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-    eve-demo settings
+    eve-productive settings
     ~~~~~~~~~~~~~~~~~
     Settings file for our little demo.
     PLEASE NOTE: We don't need to create the two collections in MongoDB.
@@ -147,7 +147,7 @@ med = {
 questionnaire = {
     'schema': {
         '_id': {
-            'type': 'string'
+            'type': 'integer'
         },
         'question': {
             'type': 'string'
