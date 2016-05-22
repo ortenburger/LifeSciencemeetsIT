@@ -32,41 +32,41 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
-  })
+  //   .state('tab', {
+  //   url: '/tab',
+  //   abstract: true,
+  //   templateUrl: 'templates/tabs.html'
+  // })
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
+  .state('dash', {
     url: '/dash',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
-      }
-    }
+    templateUrl: 'templates/tab-dash.html',
+    controller: 'DashCtrl'
   })
 
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
+  .state('avatar', {
+    url: '/avatar',
+    templateUrl: 'templates/avatar.html',
+    controller: 'AvatarCtrl'
+  })
+
+  .state('health', {
+    url: '/health',
+    templateUrl: 'templates/tab-health.html',
+    controller: 'HealthCtrl'
+  })
+
+  .state('physicians', {
+      url: '/physicians',
+      templateUrl: 'templates/physicians.html',
+      controller: 'PhysiciansCtrl'
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
+    .state('physician-detail', {
+      url: '/physicians/:chatId',
+      templateUrl: 'templates/physician-detail.html',
+      controller: 'PhysicianDetailCtrl'
     })
 
   .state('tab.account', {
@@ -77,9 +77,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'AccountCtrl'
       }
     }
+  })
+
+  .state('tab.questionnaire', {
+    url: '/questionnaire',
+    views: {
+      'tab-questionnaire': {
+        templateUrl: 'templates/questionnaire.html',
+        controller: 'QuestionnaireCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/avatar');
 
 });

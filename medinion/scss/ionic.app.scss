@@ -6,7 +6,6 @@ For example, you might change some of the default colors:
 
 $light:                           #fff !default;
 $stable:                          #f8f8f8 !default;
-$positive:                        #387ef5 !default;
 $calm:                            #11c1f3 !default;
 $balanced:                        #33cd5f !default;
 $energized:                       #ffc900 !default;
@@ -19,5 +18,34 @@ $dark:                            #444 !default;
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
+$positive:                        #272e4b !default;
+$bar-footer-height:               100px !default;
 @import "www/lib/ionic/scss/ionic";
 
+ .button-positive {
+   text-align: left;
+   font-weight: bold;
+ }
+
+ p.score {
+   color: #272e4b;
+   font-weight: bold;
+   height: 25px;
+   font-size: 20px;
+   padding-right: 10px;
+   padding-top: 5px;
+   float: right;
+ }
+
+ img.score {
+   float: right;
+ }
+
+.footer {
+  background-color: $positive;
+  height: $bar-footer-height;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 20%;
+  color: #ffffff;
+}
