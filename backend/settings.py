@@ -125,9 +125,30 @@ works = {
     }
 }
 
+med = {
+    'cache_control': 'max-age=10,must-revalidate',
+    'cache_expires': 10,
+
+    'schema': {
+        'pzn': {
+            'type': 'int',
+            'required': True,
+        },
+        'name': {
+            'type': 'string',
+            'required': True,
+        },
+        'description': {
+            'type': 'objectid',
+        },
+    }
+}
+
+
 # The DOMAIN dict explains which resources will be available and how they will
 # be accessible to the API consumer.
 DOMAIN = {
     'people': people,
     'works': works,
+    'med':med
 }

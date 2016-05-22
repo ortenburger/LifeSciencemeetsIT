@@ -4,32 +4,25 @@
 """
 
 from eve import Eve
-from gcm import GCM
+from med import blueprint
+from flask import current_app, request
 
-gcm = GCM(API_KEY)
-data = {'PZN': 'value1', 'EAN': 'value2'}
+def pre_med_get_callback(request, lookup):
+	print('now we need to check PZN')
 
-# Downstream message using JSON request
-reg_ids = ['token1', 'token2', 'token3']
-response = gcm.json_request(registration_ids=reg_ids, data=data)
-
-# Downstream message using JSON request with extra arguments
-res = gcm.json_request(
-    registration_ids=reg_ids, data=data,
-    collapse_key='uptoyou', delay_while_idle=True, time_to_live=3600
-)
-
-# Topic Messaging
-topic = 'topic name'
-gcm.send_topic_message(topic=topic, data=data)
-
-
-def pre_people_get_callback(request, lookup):
-	print('A GET request on the people endpoint has just been received!')
+def get_med_from_pzn(pzn):
+    resource = request.endpoint.split('|')[0]
+    return  current_app.data.driver.db[resource].update(
+        {"pzn" : pzn},
+        {"$set": {"user": None}},
+        multi=True
+    )
 
 app = Eve()
 
+app.register_blueprint(blueprint)
+app.on_pre_GET_med += pre_med_get_callback
 
-app.on_pre_GET_people += pre_people_get_callback
+app.get_meded += get_med_from_pzn
 
 app.run(debug=True)
