@@ -144,11 +144,51 @@ med = {
     }
 }
 
+questionnaire = {
+    'schema': {
+        '_id': {
+            'type': 'string'
+        },
+        'question': {
+            'type': 'string'
+        },
+        'data': {
+            'type': 'list',
+            'schema': {
+                'type': 'dict',
+                'schema': {
+                    'answertype': {
+                        'type': 'integer'
+                    },
+                    'answerrange': {
+                        'type': 'list',
+                        'schema': {
+                            'type': 'string'
+                        }
+                    },
+                    'answer': {
+                        'type': 'string'
+                    },
+                    'date': {
+                        'type': 'string'
+                    },
+                    'value': {
+                        'type': 'string'
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 
 # The DOMAIN dict explains which resources will be available and how they will
 # be accessible to the API consumer.
 DOMAIN = {
     'people': people,
     'works': works,
+    'questionnaire': questionnaire,
     'med':med
 }

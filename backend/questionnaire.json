@@ -1,71 +1,66 @@
 {
-    "questionnaire": [{
-        "ID": "0",
-            "question": "How much do you weight?",
+    "questionnaire": 
+    {
+        "_id": 0,
+            "question": "What is your bloodpressure?",
             "data": [{
                     "answertype":1,
-                    "answerrange":[0,500],
-                    "answer": "weight in kg",
-                    "date": "01.01.2016",
-                    "value": 0
-                }
-            ]
-        
-    },
-{
-        "ID": "1",
-            "question": "How bad is your pain?",
-            data:[{
-                    "answertype":1,
-                    "answerrange":[0,10],
-                    "answer": "No pain to near death",
-                    "date": "01.01.2016",
-                    "value": 0
-                }
-            ]
-    },
-{
-        "ID": "2",
-            "question": "What is your bloodpressure?",
-            "data": [
-                {
-                    "answertype":1,
-                    "answerrange":[70,200],
+                    "answerrange":["70","200"],
                     "answer": "systolic",
                     "date": "01.01.2016",
-                    "value": 0
+                    "value": ""
                 },
                 {
                     "answertype":1,
-                    "answerrange":[40,100],
+                    "answerrange":["40","100"],
                     "answer": "dyastolic",
                     "date": "01.01.2016",
-                    "value": 0
-                }
-            ]
+                    "value": ""
+                }]
+    },
+    {
+        "_id": 1,
+            "question": "How much do you weight?",
+            "data": [{
+                    "answertype":1,
+                    "answerrange":["0","500"],
+                    "answer": "weight in kg",
+                    "date": "01.01.2016",
+                    "value": ""
+                }]
     },
 {
-        "ID": "3",
+        "_id": 2,
+            "question": "How bad is your pain?",
+            "data":[{
+                    "answertype":1,
+                    "answerrange":["0","10"],
+                    "answer": "No pain to near death",
+                    "date": "01.01.2016",
+                    "value": ""
+                }]
+    },
+
+{
+        "_id": 3,
             "question": "What is your resting pulse?",
             "data": [{
                     "answertype":1,
-                    "answerrange":[30,250],
+                    "answerrange":["30","250"],
                     "answer": "Sit still and check your pulse or connect Fitnesstracker",
                     "date": "01.01.2016",
-                    "value": 0
-                }
-            ]  
+                    "value": ""
+                }]  
     },
 {
-        "ID": "4",
+        "_id": 4,
             "question": "Are you a Smoker?",
-            "data": [
-                {
+            "data": [{
                     "answertype":3,
                     "answerrange":["yes"],
                     "answer": "",
                     "date": "01.01.2016",
-                    "value": [0]},
+                    "value": ""},
                   
                   {
                     "depends":"0.'value'[0]==true",
@@ -73,77 +68,66 @@
                     "answerrange":["yes"],
                     "answer": "How many cigarettes daily?",
                     "date": "01.01.2016",
-                    "value": 0
-                  }
-                ]
+                    "value": ""
+                  }]
     },
 {
-        "ID": "5",
+        "_id": 5,
             "question": "How are you feeling?",
-            "data": [
-                {
+            "data": [{
                     "answertype":1,
-                    "answerrange":[0,10],
+                    "answerrange":["0","10"],
                     "answer": "from sad to happy",
                     "date": "01.01.2016",
-                    "value": 0
-                }
-            ]
+                    "value": ""
+                }]
     },
 {
-        "ID": "6",
-            "question": "Did you poo today?",
-            "data": [
-                {
+        "_id": 6,
+            "question": "D_id you poo today?",
+            "data": [{
                     "answertype":3,
                     "answerrange":["yes"],
                     "answer": "",
                     "date": "01.01.2016",
-                    "value": [0]
-                }
-            ]
+                    "value": ""
+                }]
         
     },
 {
-        "ID": "7",
+        "_id": 7,
             "question": "Are you pregnant?",
-            "data": [
-                {
+            "data": [{
                     "answertype":3,
                     "answerrange":["yes"],
                     "answer": "",
                     "date": "01.01.2016",
-                    "value": [false]
-                }
-            ]
+                    "value": ""
+                }]
     },
 {
-        "ID": "8",
-            "question": "How often did you pee today?",
-            "data": [
-                {
+        "_id": 8,
+            "question": "How often d_id you pee today?",
+            "data": [{
                     "answertype":1,
-                    "answerrange":[0,30],
+                    "answerrange":["0","30"],
                     "answer": "",
                     "date": "01.01.2016",
-                    "value": 0
-                }
-            ]
+                    "value": ""
+                }]
     },
 {
-        "ID": "9",
+        "_id": 9,
         "fields": {
             "question": "How many steps you took today?",
-            "data": [
-                {
+            "data": [{
                     "answertype":1,
-                    "answerrange":[0,10000],
+                    "answerrange":["0","10000"],
                     "answer": "No pain to near death",
                     "date": "01.01.2016",
-                    "value": 0
-                }
-            ]
+                    "value": ""
+                }]
         }
     }
-  ]
+  
 }
