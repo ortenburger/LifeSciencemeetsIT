@@ -1,0 +1,59 @@
+<ion-view view-title="Questionnaire">
+  <ion-content on-swipe-right="gotoDash()">
+    <ion-list>
+      <ion-item>
+        <p>
+          How are you feeling today?
+        </p>
+        <p align="center">
+          <i class="icon ion-android-sad" style="font-size: 25px;"></i><input type="range" name="wellbeing" style="width: 80%; margin-left: 10px; margin-right: 10px;" /><i class="icon ion-android-happy" style="font-size: 25px;"></i>
+        </p>
+      </ion-item>
+      <ion-item>
+        Are you in pain?
+        <p align="center">
+          <i class="icon ion-android-happy" style="font-size: 25px;"></i><input type="range" value="0" name="pain" style="width: 80%; margin-left: 10px; margin-right: 10px;" /><i class="icon ion-android-sad" style="font-size: 25px;"></i>
+        </p>
+      </ion-item>
+      <ion-item class="item-toggle">
+         Did you poop?
+        <label class="toggle toggle-assertive">
+          <input type="checkbox" name="poo" />
+          <div class="track">
+           <div class="handle"></div>
+         </div>
+       </label>
+      </ion-item>
+      <ion-item class="item-input item-select">
+        <div class="input-label">
+          How often did you pee?
+        </div>
+        <select>
+          <option>
+            Never
+          </option>
+          <option>
+            1-2 times
+          </option>
+          <option>
+            3-5 times
+          </option>
+          <option>
+            6-9 times
+          </option>
+          <option>
+            9 times or more
+          </option>
+        </select>
+      </ion-item>
+      <ion-item>
+        <p>
+          How physically active have you been?
+        </p>
+        <p align="center">
+          <i class="icon ion-android-sad" style="font-size: 25px;"></i><input type="range" name="wellbeing" style="width: 80%; margin-left: 10px; margin-right: 10px;" /><i class="icon ion-android-happy" style="font-size: 25px;"></i>
+        </p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

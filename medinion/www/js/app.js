@@ -54,7 +54,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   .state('health', {
     url: '/health',
-    templateUrl: 'templates/tab-health.html',
+    templateUrl: 'templates/health.html',
     controller: 'HealthCtrl'
   })
 
@@ -79,14 +79,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.questionnaire', {
+  .state('questionnaire', {
     url: '/questionnaire',
-    views: {
-      'tab-questionnaire': {
-        templateUrl: 'templates/questionnaire.html',
-        controller: 'QuestionnaireCtrl'
-      }
-    }
+    templateUrl: 'templates/questionnaire.html',
+    controller: 'QuestionnaireCtrl'
   });
 
   // if none of the above states are matched, use this as the fallback

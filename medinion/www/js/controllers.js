@@ -10,15 +10,25 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('AvatarCtrl', function($scope,$state,$ionicHistory,$ionicViewSwitcher) {
+.controller('AvatarCtrl', function($scope,$state,$ionicHistory,$ionicViewSwitcher,$timeout) {
   $scope.minions=['img/Minion_1.jpg','img/Minion_2.jpg','img/Minion_3.jpg','img/Minion_4.jpg'];
   $scope.currentMinion=1;
   $scope.minionIncrement=1;
   $scope.nextPill=new Date();
   $scope.nextPill.setTime(Date.parse("2016-05-22"));
-  $scope.nextPill.setHours(20);
-  var diff=$scope.nextPill.getTime()-(new Date()).getTime();
-  $scope.untilNext=diff;
+  $scope.nextPill.setHours(18);
+  $scope.untilNext=function() {
+    var diff=$scope.nextPill.getTime()-(new Date()).getTime();
+    var hours=Math.floor(diff/1000/60/60);
+    hours=hours<10?'0'+hours:hours;
+    var minutes=Math.floor(diff/1000/60)-hours*60;
+    minutes=minutes<10?'0'+minutes:minutes;
+    var seconds=Math.floor(diff/1000)-(hours*60*60)-(minutes*60);
+    seconds=seconds<10?'0'+seconds:seconds;
+    $scope.timeUntilNext=hours+':'+minutes+':'+seconds;
+    $timeout($scope.untilNext, 1000);
+  };
+  $scope.untilNext();
   $scope.nextMinion=function() {
     if($scope.currentMinion>=$scope.minions.length||$scope.currentMinion<0) {
       $scope.minionIncrement*=-1;
@@ -27,12 +37,12 @@ angular.module('starter.controllers', [])
       $scope.currentMinion+=$scope.minionIncrement;
     }
   }
-  $scope.gotoDash=function() {
+  $scope.goto=function(view) {
     $ionicHistory.nextViewOptions({
-        historyRoot: true
+        historyRoot: view=='dash'?true:false
     });
-    $ionicViewSwitcher.nextDirection('back');
-    $state.go('dash');
+    $ionicViewSwitcher.nextDirection(view=='dash'?'back':'forward');
+    $state.go(view);
   };
 })
 
