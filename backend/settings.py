@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-    eve-demo settings
+    eve-productive settings
     ~~~~~~~~~~~~~~~~~
     Settings file for our little demo.
     PLEASE NOTE: We don't need to create the two collections in MongoDB.
@@ -144,11 +144,51 @@ med = {
     }
 }
 
+questionnaire = {
+    'schema': {
+        '_id': {
+            'type': 'integer'
+        },
+        'question': {
+            'type': 'string'
+        },
+        'data': {
+            'type': 'list',
+            'schema': {
+                'type': 'dict',
+                'schema': {
+                    'answertype': {
+                        'type': 'integer'
+                    },
+                    'answerrange': {
+                        'type': 'list',
+                        'schema': {
+                            'type': 'string'
+                        }
+                    },
+                    'answer': {
+                        'type': 'string'
+                    },
+                    'date': {
+                        'type': 'string'
+                    },
+                    'value': {
+                        'type': 'string'
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 
 # The DOMAIN dict explains which resources will be available and how they will
 # be accessible to the API consumer.
 DOMAIN = {
     'people': people,
     'works': works,
+    'questionnaire': questionnaire,
     'med':med
 }

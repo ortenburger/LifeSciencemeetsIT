@@ -26,5 +26,8 @@ def index():
     for row in soup.findAll('table')[0].tbody.findAll('tr'):
         first_column = row.findAll('td')[0].contents
         json_data["a_substance"] = first_column[0].string
+	
+	# Drug interaction by drugs.com:
+	# http://www.drugs.com/interactions-check.php?drug_list=2221-0,243-3197,1578-957
 
     return json.dumps(json_data, ensure_ascii=False)
